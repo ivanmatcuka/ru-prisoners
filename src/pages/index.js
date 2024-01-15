@@ -1,5 +1,7 @@
 import { Feed } from "@/components/Feed";
+import { Form } from "@/components/Form";
 import { Person } from "@/components/Person";
+
 import Image from "next/image";
 
 const ARTISTS = [
@@ -70,8 +72,8 @@ const PRISONERS = [
 
 export default function Home() {
   return (
-    <main className="p-8 flex flex-col min-h-screen max-w-5xl m-auto">
-      <header className="flex justify-between">
+    <main className="lg:p-8 p-4 flex flex-col min-h-screen max-w-5xl m-auto">
+      <header className="flex justify-between flex-col lg:flex-row">
         <p className="text-4xl uppercase">
           politische:r
           <br />
@@ -81,7 +83,7 @@ export default function Home() {
         </p>
         <h1 className="text-4xl header__heading">benefizkonzert</h1>
       </header>
-      <div className="flex flex-row mt-16 gap-x-4">
+      <div className="flex flex-col gap-y-8 lg:gap-x-4 lg:flex-row mt-8 lg:mt-16">
         <div>
           <Image
             alt="Gorinov"
@@ -91,16 +93,11 @@ export default function Home() {
             src="/gorinov.png"
           />
         </div>
-        <div className="flex-1 flex flex-col flex-align-end items-baseline gap-y-2">
-          <button className="block bg-accent text-white rounded py-2 px-4">
-            Einladungskarten
-          </button>
-          <button className="block bg-grey border border-black rounded py-2 px-4">
-            Konzertprogramm
-          </button>
+        <div className="flex-1 flex flex-col flex-align-end items-baseline">
+          <Form />
         </div>
-        <div className="w-80 news-block">
-          <h2 className="text-3xl font-medium">Новости</h2>
+        <div className="w-full lg:w-80 news-block">
+          <h2 className="text-2xl font-medium">Новости</h2>
           <div className="news-block__notch mb-4 mt-4"></div>
           <Feed />
         </div>
@@ -108,7 +105,7 @@ export default function Home() {
       <div className="my-8">
         <h2 className="text-3xl font-medium block">Lorem</h2>
         <div className="news-block__notch mb-4 mt-4"></div>
-        <div className="flex juitify-center gap-x-4">
+        <div className="flex juitify-center gap-x-4 flex-wrap">
           {ARTISTS.map((artist, index) => (
             <Person key={index} artist={artist} />
           ))}
@@ -117,7 +114,7 @@ export default function Home() {
       <div className="my-8">
         <h2 className="text-3xl font-medium block">Ipsum</h2>
         <div className="news-block__notch mb-4 mt-4"></div>
-        <div className="flex juitify-center gap-x-4">
+        <div className="flex juitify-center gap-x-4 flex-wrap">
           {PRISONERS.map((artist, index) => (
             <Person key={index} artist={artist} />
           ))}

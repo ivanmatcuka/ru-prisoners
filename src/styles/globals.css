@@ -1,3 +1,5 @@
+@import "~hover.css/css/hover-min.css";
+
 @font-face {
   font-family: "Kyiv Type Sans";
   src: url(/kyivtypesans/KyivTypeSans-VarGX.ttf);
@@ -43,4 +45,8 @@ body {
   height: 4px;
 
   background-color: var(--accent-color);
+}
+
+.person__image {
+  width: 100%;
 }
