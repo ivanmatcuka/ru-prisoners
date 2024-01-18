@@ -18,7 +18,6 @@ export const RegistrationForm = () => {
   };
 
   const handleSubmit = ({ email, name }, { resetForm }) => {
-    setIsDownloading(true);
     setIsSaving(true);
 
     const formData = new FormData();
@@ -29,7 +28,10 @@ export const RegistrationForm = () => {
     fetch(process.env.GOOGLE_APPS_SCRIPT, {
       method: "POST",
       body: formData,
-    }).finally(() => setIsSaving(false));
+    }).finally(() => {
+      resetForm();
+      setIsSaving(false);
+    });
   };
 
   return (
