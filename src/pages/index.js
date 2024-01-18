@@ -190,7 +190,7 @@ export default function Home() {
           Die Musiker kommen aus verschiedenen Städten Deutschlands und treten
           beim Konzert auf freiwilliger Basis auf.
         </p>
-        <div className="flex juitify-center gap-x-4  flex-wrap lg:flex-nowrap">
+        <div className="flex juitify-center gap-4 flex-wrap">
           {ARTISTS.map((artist, index) => (
             <Person key={index} artist={artist} />
           ))}
