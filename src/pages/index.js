@@ -163,49 +163,61 @@ export default function Home() {
         </div>
       </div>
       <div className="my-8">
-        <h2 className="text-3xl font-medium block">Lorem</h2>
+        <h2 className="text-3xl font-medium block">Politische Gefangene</h2>
         <div className="news-block__notch mb-4 mt-4"></div>
-        <div className="flex juitify-center gap-x-4 flex-wrap">
-          {ARTISTS.map((artist, index) => (
-            <Person key={index} artist={artist} />
-          ))}
-        </div>
-      </div>
-      <div className="my-8">
-        <h2 className="text-3xl font-medium block">Ipsum</h2>
-        <div className="news-block__notch mb-4 mt-4"></div>
+        <p className="my-4">
+          Es gibt Hunderte von politischen Gefangenen in Russland, und ihre Zahl
+          nimmt ständig zu. Ein paar Geschichten können Sie hier lesen. Eine
+          umfassende Liste findet sich auf der Website von Memorial.
+        </p>
         <div className="flex juitify-center gap-x-4 flex-wrap">
           {PRISONERS.map((artist, index) => (
             <Person key={index} artist={artist} />
           ))}
         </div>
       </div>
+      <div className="my-8">
+        <h2 className="text-3xl font-medium block">Musiker</h2>
+        <div className="news-block__notch mb-4 mt-4"></div>
+        <p className="my-4">
+          Die Musiker kommen aus verschiedenen Städten Deutschlands und treten
+          beim Konzert auf freiwilliger Basis auf.
+        </p>
+        <div className="flex juitify-center gap-x-4 flex-wrap">
+          {ARTISTS.map((artist, index) => (
+            <Person key={index} artist={artist} />
+          ))}
+        </div>
+      </div>
       <footer className="py-8 mt-auto">
+        <h2 className="text-3xl font-medium block">Veranstalter</h2>
+        <div className="news-block__notch mb-4 mt-4"></div>
+
         <p>
           <a
-            className="text-accent underline"
+            className="underline hover:no-underline hover:text-accent"
             target="_blank"
-            href="https://www.fas.de/"
+            href="mailto:nowarhamburg@gmail.com"
           >
-            ФАС
+            nowarhamburg@gmail.com
           </a>
         </p>
         <p>
           <a
-            className="text-accent underline"
+            className="underline hover:no-underline hover:text-accent"
             target="_blank"
-            href="https://www.fas.de/"
+            href="https://www.instagram.com/far_hamburg?igsh=MW0zeWdjNmpyZWl5cw=="
           >
-            АГС
+            Feminist Antiwar Resistance in Hamburg
           </a>
         </p>
         <p>
           <a
-            className="text-accent underline"
-            href="https://www.fas.de/"
-            type="email"
+            className="underline hover:no-underline hover:text-accent"
+            target="_blank"
+            href="https://t.me/nowar_HH"
           >
-            example@mail.com
+            Antiwar Hamburg
           </a>
         </p>
       </footer>
