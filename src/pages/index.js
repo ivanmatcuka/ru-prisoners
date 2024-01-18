@@ -168,7 +168,14 @@ export default function Home() {
         <p className="my-4">
           Es gibt Hunderte von politischen Gefangenen in Russland, und ihre Zahl
           nimmt ständig zu. Ein paar Geschichten können Sie hier lesen. Eine
-          umfassende Liste findet sich auf der Website von Memorial.
+          umfassende Liste findet sich auf der Website von{" "}
+          <a
+            href="https://memopzk.org/"
+            target="_blank"
+            className="underline hover:no-underline hover:text-accent"
+          >
+            Memorial.
+          </a>
         </p>
         <div className="flex juitify-center gap-4 flex-wrap">
           {PRISONERS.map((artist, index) => (
