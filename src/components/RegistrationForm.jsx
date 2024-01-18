@@ -4,6 +4,7 @@ import JsFileDownloader from "js-file-downloader";
 import { useState } from "react";
 export const RegistrationForm = () => {
   const [isDownloading, setIsDownloading] = useState();
+  const [isSaving, setIsSaving] = useState();
 
   return (
     <div className="flex min-h-full flex-col justify-start w-full px-0 lg:px-8">
@@ -21,6 +22,8 @@ export const RegistrationForm = () => {
           }}
           onSubmit={({ email, name }, { resetForm }) => {
             setIsDownloading(true);
+            setIsSaving(true);
+
             const formData = new FormData();
             formData.append("date", new Date(Date.now()));
             formData.append("email", email);
@@ -54,7 +57,10 @@ export const RegistrationForm = () => {
               .catch((error) => {
                 // Called when an error occurred
               })
-              .finally(() => setIsDownloading(false));
+              .finally(() => {
+                setIsDownloading(false);
+                setIsSaving(false);
+              });
           }}
         >
           <Form>
@@ -90,7 +96,7 @@ export const RegistrationForm = () => {
               <button
                 className="block bg-accent text-white rounded py-2 px-4 mb-2 w-full disabled:opacity-50"
                 type="submit"
-                disabled={isDownloading}
+                disabled={isDownloading || isSaving}
               >
                 Tickets sichern
               </button>
