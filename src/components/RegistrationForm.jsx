@@ -1,6 +1,7 @@
 import { Formik, Field, Form } from "formik";
 import JsFileDownloader from "js-file-downloader";
 import { useState } from "react";
+import Toastify from "toastify-js";
 export const RegistrationForm = () => {
   const [isDownloading, setIsDownloading] = useState();
   const [isSaving, setIsSaving] = useState();
@@ -28,10 +29,23 @@ export const RegistrationForm = () => {
     fetch(process.env.GOOGLE_APPS_SCRIPT, {
       method: "POST",
       body: formData,
-    }).finally(() => {
-      resetForm();
-      setIsSaving(false);
-    });
+    })
+      .then(() => {
+        Toastify({
+          text: "Vielen Dank! Der Brief mit den Tickets wurde an Ihre E-Mail-Adresse gesendet.",
+          duration: 3000,
+          close: true,
+          gravity: "top",
+          position: "left",
+          stopOnFocus: true,
+          backgroundColor: "#00b37f",
+        }).showToast();
+        resetForm();
+      })
+      .finally(() => {
+        resetForm();
+        setIsSaving(false);
+      });
   };
 
   return (
