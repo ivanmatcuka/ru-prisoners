@@ -170,7 +170,7 @@ export default function Home() {
           nimmt ständig zu. Ein paar Geschichten können Sie hier lesen. Eine
           umfassende Liste findet sich auf der Website von Memorial.
         </p>
-        <div className="flex juitify-center gap-x-4 flex-wrap lg:flex-nowrap gap-5 px-5">
+        <div className="flex juitify-center gap-x-4 flex-wrap lg:flex-nowrap">
           {PRISONERS.map((artist, index) => (
             <Person key={index} artist={artist} />
           ))}
@@ -183,7 +183,7 @@ export default function Home() {
           Die Musiker kommen aus verschiedenen Städten Deutschlands und treten
           beim Konzert auf freiwilliger Basis auf.
         </p>
-        <div className="flex juitify-center gap-x-4 flex-wrap lg:flex-nowrap gap-5 px-5">
+        <div className="flex juitify-center gap-x-4  flex-wrap lg:flex-nowrap">
           {ARTISTS.map((artist, index) => (
             <Person key={index} artist={artist} />
           ))}
