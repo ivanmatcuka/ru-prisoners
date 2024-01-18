@@ -6,6 +6,53 @@ export const RegistrationForm = () => {
   const [isDownloading, setIsDownloading] = useState();
   const [isSaving, setIsSaving] = useState();
 
+  const downloadFile = () => {
+    setIsDownloading(true);
+
+    new JsFileDownloader({
+      url: "/program.pdf",
+    })
+      .catch((error) => {
+        // Called when an error occurred
+      })
+      .finally(() => setIsDownloading(false));
+  };
+
+  const handleSubmit = ({ email, name }, { resetForm }) => {
+    setIsDownloading(true);
+    setIsSaving(true);
+
+    const formData = new FormData();
+    formData.append("date", new Date(Date.now()));
+    formData.append("email", email);
+    formData.append("name", name);
+
+    fetch(process.env.GOOGLE_APPS_SCRIPT, {
+      method: "POST",
+      body: formData,
+    }).finally(() => setIsSaving(false));
+
+    new JsFileDownloader({
+      url: "/invitation.jpg",
+    })
+      .then(() => {
+        Toastify({
+          text: "Vielen Dank! Der Brief mit den Tickets wurde an Ihre E-Mail-Adresse gesendet.",
+          duration: 3000,
+          close: true,
+          gravity: "top",
+          position: "left",
+          stopOnFocus: true,
+          backgroundColor: "#00b37f",
+        }).showToast();
+        resetForm();
+      })
+      .catch((error) => {
+        // Called when an error occurred
+      })
+      .finally(() => setIsDownloading(false));
+  };
+
   return (
     <div className="flex min-h-full flex-col justify-start w-full px-0 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
@@ -20,48 +67,7 @@ export const RegistrationForm = () => {
             email: "",
             name: "",
           }}
-          onSubmit={({ email, name }, { resetForm }) => {
-            setIsDownloading(true);
-            setIsSaving(true);
-
-            const formData = new FormData();
-            formData.append("date", new Date(Date.now()));
-            formData.append("email", email);
-            formData.append("name", name);
-
-            fetch(process.env.GOOGLE_APPS_SCRIPT, {
-              method: "POST",
-              body: formData,
-            })
-              .then((response) => {
-                return response.json();
-              })
-              .then((data) => {
-                console.log(data);
-              });
-            new JsFileDownloader({
-              url: "/invitation.jpg",
-            })
-              .then(() => {
-                Toastify({
-                  text: "Vielen Dank! Der Brief mit den Tickets wurde an Ihre E-Mail-Adresse gesendet.",
-                  duration: 3000,
-                  close: true,
-                  gravity: "top",
-                  position: "left",
-                  stopOnFocus: true,
-                  backgroundColor: "#00b37f",
-                }).showToast();
-                resetForm();
-              })
-              .catch((error) => {
-                // Called when an error occurred
-              })
-              .finally(() => {
-                setIsDownloading(false);
-                setIsSaving(false);
-              });
-          }}
+          onSubmit={handleSubmit}
         >
           <Form>
             <div>
@@ -100,7 +106,11 @@ export const RegistrationForm = () => {
               >
                 Tickets sichern
               </button>
-              <button className="block bg-grey border border-black rounded py-2 px-4 w-full">
+              <button
+                className="block bg-grey border border-black rounded py-2 px-4 w-full"
+                onClick={downloadFile}
+                disabled={isDownloading || isSaving}
+              >
                 Konzertprogramm
               </button>
             </div>
