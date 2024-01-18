@@ -141,11 +141,11 @@ export default function Home() {
           <div className="news-block__notch mb-4 mt-4"></div>
           <Feed />
         </div>
-        <div className="flex-1">
+        <div className="flex flex-col flex-1">
           <h2 className="text-2xl font-medium">Spenden für:</h2>
-          <div className="flex-1 flex flex-wrap justify-between mt-8">
+          <div className="flex mt-8 lg:m-auto flex-wrap items-center justify-between gap-y-8">
             {DONATES.map((donate, index) => (
-              <div className="w-2/6" key={index}>
+              <div className="w-full lg:w-2/6" key={index}>
                 <Donate donate={donate} />
               </div>
             ))}
