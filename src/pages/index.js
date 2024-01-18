@@ -1,6 +1,6 @@
 import { Donate } from "@/components/Donate";
 import { Feed } from "@/components/Feed";
-import { Form } from "@/components/Form";
+import { RegistrationForm } from "@/components/RegistrationForm";
 import { Person } from "@/components/Person";
 
 import Image from "next/image";
@@ -144,17 +144,18 @@ export default function Home() {
           </p>
         </div>
         <div className="w-full lg:w-96 news-block">
-          <Form />
+          <RegistrationForm />
         </div>
       </div>
       <div className="flex flex-col gap-y-8 lg:gap-x-16 lg:flex-row mt-8 lg:mt-16">
         <div className="w-full lg:w-80 news-block">
           <h2 className="text-2xl font-medium">Nachrichten</h2>
-          <div className="news-block__notch mb-4 mt-4"></div>
+          <div className="news-block__notch mb-4 mt-4" />
           <Feed />
         </div>
         <div className="flex flex-col flex-1">
           <h2 className="text-2xl font-medium">Spenden für:</h2>
+          <div className="news-block__notch mb-4 mt-4" />
           <div className="flex mt-8 lg:m-auto flex-wrap items-center justify-between gap-y-8">
             {DONATES.map((donate, index) => (
               <div className="w-full lg:w-2/6" key={index}>
