@@ -81,13 +81,13 @@ const DONATES = [
   {
     name: "MEMORIAL",
     link: "https://memohrc.org/en/content/support-political-prisoners",
-    imageSrc: "/memorial.png",
+    imageSrc: "/memorial.jpeg",
     description: "Human Rights Centre",
   },
   {
     name: "SOLIDARITY ZONE",
     link: "https://solidarityzone.net/",
-    imageSrc: "/solidarity_zone.png",
+    imageSrc: "/solidarity_zone.webp",
     description:
       "Grassroots advocacy initiative that operates anonymously and decentralized",
   },
