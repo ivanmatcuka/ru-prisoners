@@ -9,22 +9,22 @@ const ARTISTS = [
   {
     name: "Daniil Orlov",
     link: "https://www.thalia-theater.de/ueber-uns/ensemble/schauspiel/darsteller/daniil-orlov",
-    imageSrc: "https://picsum.photos/200",
+    imageSrc: "/artists/daniil_o.png",
   },
   {
     name: "Alexander Estis",
     link: "https://estis.ch/",
-    imageSrc: "https://picsum.photos/200",
+    imageSrc: "/artists/alexander_e.png",
   },
   {
     name: "Yaroslav Georgiev",
     link: "https://www.stuttgarter-philharmoniker.de/3545.html",
-    imageSrc: "https://picsum.photos/200",
+    imageSrc: "/artists/yaroslav_g.png",
   },
   {
     name: "Evgeniya Kleyn",
     link: "https://www.tonali.de/profile/evgenyia-kleyn/",
-    imageSrc: "https://picsum.photos/200",
+    imageSrc: "/artists/evgeniya_k.png",
   },
 ];
 
@@ -170,7 +170,7 @@ export default function Home() {
           nimmt ständig zu. Ein paar Geschichten können Sie hier lesen. Eine
           umfassende Liste findet sich auf der Website von Memorial.
         </p>
-        <div className="flex juitify-center gap-x-4 flex-wrap lg:flex-nowrap">
+        <div className="flex juitify-center gap-x-4 flex-wrap lg:flex-nowrap gap-5 px-5">
           {PRISONERS.map((artist, index) => (
             <Person key={index} artist={artist} />
           ))}
@@ -183,7 +183,7 @@ export default function Home() {
           Die Musiker kommen aus verschiedenen Städten Deutschlands und treten
           beim Konzert auf freiwilliger Basis auf.
         </p>
-        <div className="flex juitify-center gap-x-4 flex-nowrap lg:flex-wrap">
+        <div className="flex juitify-center gap-x-4 flex-wrap lg:flex-nowrap gap-5 px-5">
           {ARTISTS.map((artist, index) => (
             <Person key={index} artist={artist} />
           ))}
