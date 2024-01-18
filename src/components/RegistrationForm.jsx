@@ -1,5 +1,6 @@
 import { Formik, Field, Form } from "formik";
-
+import Toastify from "toastify-js";
+import JsFileDownloader from "js-file-downloader";
 export const RegistrationForm = () => {
   return (
     <div className="flex min-h-full flex-col justify-start w-full px-0 lg:px-8">
@@ -15,13 +16,30 @@ export const RegistrationForm = () => {
             email: "",
             name: "",
           }}
-          onSubmit={(values) => {
-            console.log(values);
+          onSubmit={({ email, name }, { resetForm }) => {
+            new JsFileDownloader({
+              url: "/invitation.jpg",
+            })
+              .then(() => {
+                Toastify({
+                  text: "Vielen Dank! Der Brief mit den Tickets wurde an Ihre E-Mail-Adresse gesendet.",
+                  duration: 3000,
+                  close: true,
+                  gravity: "top",
+                  position: "left",
+                  stopOnFocus: true,
+                  backgroundColor: "#00b37f",
+                }).showToast();
+                resetForm();
+              })
+              .catch((error) => {
+                // Called when an error occurred
+              });
           }}
         >
           <Form>
             <div>
-              <label className="block text-gray-900">Email address</label>
+              <label className="block text-gray-900">Email:</label>
               <div className="mt-2">
                 <Field
                   id="email"
@@ -34,9 +52,9 @@ export const RegistrationForm = () => {
               </div>
             </div>
 
-            <div>
+            <div className="mt-4">
               <div className="flex items-center justify-between">
-                <label className="block text-gray-900">Name</label>
+                <label className="block text-gray-900">Name:</label>
               </div>
               <div className="mt-2">
                 <Field
