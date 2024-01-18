@@ -1,5 +1,4 @@
 import { Formik, Field, Form } from "formik";
-import Toastify from "toastify-js";
 import JsFileDownloader from "js-file-downloader";
 import { useState } from "react";
 export const RegistrationForm = () => {
@@ -31,26 +30,6 @@ export const RegistrationForm = () => {
       method: "POST",
       body: formData,
     }).finally(() => setIsSaving(false));
-
-    new JsFileDownloader({
-      url: "/invitation.jpg",
-    })
-      .then(() => {
-        Toastify({
-          text: "Vielen Dank! Der Brief mit den Tickets wurde an Ihre E-Mail-Adresse gesendet.",
-          duration: 3000,
-          close: true,
-          gravity: "top",
-          position: "left",
-          stopOnFocus: true,
-          backgroundColor: "#00b37f",
-        }).showToast();
-        resetForm();
-      })
-      .catch((error) => {
-        // Called when an error occurred
-      })
-      .finally(() => setIsDownloading(false));
   };
 
   return (

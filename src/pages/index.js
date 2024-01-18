@@ -96,7 +96,7 @@ const DONATES = [
 export default function Home() {
   return (
     <main className="lg:p-8 p-4 flex flex-col min-h-screen max-w-6xl m-auto">
-      <header className="flex justify-between flex-col lg:flex-row">
+      <header className="flex lg:justify-between flex-col lg:flex-row">
         <p className="text-4xl uppercase">
           politische:r
           <br />
@@ -104,7 +104,7 @@ export default function Home() {
           <br />
           unterstützen
         </p>
-        <div className="text-right">
+        <div className="mt-4 lg:text-right lg:mt-auto">
           <h1 className="text-4xl header__heading">benefizkonzert</h1>
           <p className="text-1xl">17.Februar 2024</p>
           <p className="text-1xl">19:30</p>
