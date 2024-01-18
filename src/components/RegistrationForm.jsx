@@ -1,7 +1,10 @@
 import { Formik, Field, Form } from "formik";
 import Toastify from "toastify-js";
 import JsFileDownloader from "js-file-downloader";
+import { useState } from "react";
 export const RegistrationForm = () => {
+  const [isDownloading, setIsDownloading] = useState();
+
   return (
     <div className="flex min-h-full flex-col justify-start w-full px-0 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
@@ -17,6 +20,21 @@ export const RegistrationForm = () => {
             name: "",
           }}
           onSubmit={({ email, name }, { resetForm }) => {
+            setIsDownloading(true);
+            const formData = new FormData();
+            formData.append("email", email);
+            formData.append("name", name);
+
+            fetch(process.env.GOOGLE_APPS_SCRIPT, {
+              method: "POST",
+              body: formData,
+            })
+              .then((response) => {
+                return response.json();
+              })
+              .then((data) => {
+                console.log(data);
+              });
             new JsFileDownloader({
               url: "/invitation.jpg",
             })
@@ -34,7 +52,8 @@ export const RegistrationForm = () => {
               })
               .catch((error) => {
                 // Called when an error occurred
-              });
+              })
+              .finally(() => setIsDownloading(false));
           }}
         >
           <Form>
@@ -68,8 +87,9 @@ export const RegistrationForm = () => {
 
             <div className="mt-6">
               <button
-                className="block bg-accent text-white rounded py-2 px-4 mb-2 w-full"
+                className="block bg-accent text-white rounded py-2 px-4 mb-2 w-full disabled:opacity-50"
                 type="submit"
+                disabled={isDownloading}
               >
                 Tickets sichern
               </button>

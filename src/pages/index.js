@@ -5,9 +5,6 @@ import { Person } from "@/components/Person";
 
 import Image from "next/image";
 
-const GOOGLE_URL =
-  "https://www.google.com/maps/place/Alfred+Schnittke+Akademie+International/@53.5485088,9.9364534,17z/data=!3m1!4b1!4m6!3m5!1s0x47b1858713b7ec71:0xe2057c9e75a1dd73!8m2!3d53.5485088!4d9.9364534!16s%2Fg%2F1tfpnrnf?hl=de-de&entry=ttu";
-
 const ARTISTS = [
   {
     name: "Gorinov",
@@ -112,7 +109,7 @@ export default function Home() {
           <p className="text-1xl">17.Februar 2024</p>
           <p className="text-1xl">19:30</p>
           <p className="text-sm underline hover:no-underline hover:text-accent">
-            <a href={GOOGLE_URL} target="_blank">
+            <a href={process.env.GOOGLE_MAPS_URL} target="_blank">
               Max-Brauer-Allee 24, 22765 Hamburg
             </a>
           </p>
