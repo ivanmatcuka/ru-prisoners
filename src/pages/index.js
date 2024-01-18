@@ -7,67 +7,67 @@ import Image from "next/image";
 
 const ARTISTS = [
   {
-    name: "Gorinov",
-    link: "#",
+    name: "Daniil Orlov",
+    link: "https://www.thalia-theater.de/ueber-uns/ensemble/schauspiel/darsteller/daniil-orlov",
     imageSrc: "https://picsum.photos/200",
   },
   {
-    name: "Gorinov",
-    link: "#",
+    name: "Alexander Estis",
+    link: "https://estis.ch/",
     imageSrc: "https://picsum.photos/200",
   },
   {
-    name: "Gorinov",
-    link: "#",
+    name: "Yaroslav Georgiev",
+    link: "https://www.stuttgarter-philharmoniker.de/3545.html",
     imageSrc: "https://picsum.photos/200",
   },
   {
-    name: "Gorinov",
-    link: "#",
-    imageSrc: "https://picsum.photos/200",
-  },
-  {
-    name: "Gorinov",
-    link: "#",
-    imageSrc: "https://picsum.photos/200",
-  },
-  {
-    name: "Gorinov",
-    link: "#",
+    name: "Evgeniya Kleyn",
+    link: "https://www.tonali.de/profile/evgenyia-kleyn/",
     imageSrc: "https://picsum.photos/200",
   },
 ];
 
 const PRISONERS = [
   {
-    name: "Gorinov",
-    link: "#",
-    imageSrc: "https://picsum.photos/200",
+    name: "Dmitry Ivanov",
+    link: "https://en.ovdinfo.org/save-yourselves-better-times-and-be-ready-them-come-interview-political-prisoner-dmitry",
+    imageSrc: "/prisoners/ivanov.png",
   },
   {
-    name: "Gorinov",
-    link: "#",
-    imageSrc: "https://picsum.photos/200",
+    name: "Aleksandra Skochilenko",
+    link: "https://www.euronews.com/culture/2023/11/16/russian-artist-sentenced-to-7-years-in-prison-for-anti-war-messages",
+    imageSrc: "/prisoners/skochilenko.png",
   },
   {
-    name: "Gorinov",
-    link: "#",
-    imageSrc: "https://picsum.photos/200",
+    name: "Alexei Gorinov",
+    link: "https://www.theguardian.com/world/2022/jul/08/moscow-councillor-jailed-seven-years-criticising-ukraine-war-alexei-gorinov",
+    imageSrc: "/prisoners/gorinov.png",
   },
   {
-    name: "Gorinov",
-    link: "#",
-    imageSrc: "https://picsum.photos/200",
+    name: "Vladimir Kara-Murza",
+    link: "https://www.themoscowtimes.com/2023/04/17/kremlin-critic-kara-murza-sentenced-to-25-years-in-prison-a80856",
+    imageSrc: "/prisoners/kara-murza.png",
   },
   {
-    name: "Gorinov",
-    link: "#",
-    imageSrc: "https://picsum.photos/200",
+    name: "Said-Mukhamad Dzhumaev",
+    link: "https://memohrc.org/en/news_old/said-mukhamad-dzhumaev-involved-clashes-police-protest-rally-support-navalny-political",
+    imageSrc: "/prisoners/dzhumayev.png",
   },
   {
-    name: "Gorinov",
-    link: "#",
-    imageSrc: "https://picsum.photos/200",
+    name: "Zhenya Berkovich and Svetlana Petriychuk",
+    link: "https://www.dw.com/en/russia-outrage-after-director-and-playwright-detained/a-65533685",
+    imageSrc: "/prisoners/berkovich_and_petriychuk.png",
+  },
+  {
+    name: "Valeria Zotova",
+    link: "https://therussianreader.com/2023/02/23/2360/",
+    imageSrc: "/prisoners/zotova.png",
+  },
+  {
+    name: "Anton Zhuchkov and Vladimir Sergeev ",
+    link: "https://t.me/solidarity_zone/1282",
+    imageSrc: "/prisoners/zhuchkov_and_sergeev.png",
   },
 ];
 
