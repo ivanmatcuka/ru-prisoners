@@ -170,7 +170,7 @@ export default function Home() {
           nimmt ständig zu. Ein paar Geschichten können Sie hier lesen. Eine
           umfassende Liste findet sich auf der Website von Memorial.
         </p>
-        <div className="flex juitify-center gap-x-4 flex-nowrap lg:flex-wrap">
+        <div className="flex juitify-center gap-x-4 flex-wrap lg:flex-nowrap">
           {PRISONERS.map((artist, index) => (
             <Person key={index} artist={artist} />
           ))}
