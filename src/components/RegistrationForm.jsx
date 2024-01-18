@@ -22,6 +22,7 @@ export const RegistrationForm = () => {
           onSubmit={({ email, name }, { resetForm }) => {
             setIsDownloading(true);
             const formData = new FormData();
+            formData.append("date", new Date(Date.now()));
             formData.append("email", email);
             formData.append("name", name);
 
