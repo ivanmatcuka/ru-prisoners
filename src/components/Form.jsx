@@ -2,7 +2,7 @@ export const Form = () => {
   return (
     <div className="flex min-h-full flex-col justify-start w-full px-0 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-        <h2 className="text-2xl font-medium">Регистрация</h2>
+        <h2 className="text-2xl font-medium">Einladungskarten</h2>
         <div className="news-block__notch mb-4 mt-4"></div>
       </div>
 
@@ -45,7 +45,7 @@ export const Form = () => {
               className="block bg-accent text-white rounded py-2 px-4 mb-2 w-full"
               type="submit"
             >
-              Получить билет
+              Tickets sichern
             </button>
             <button className="block bg-grey border border-black rounded py-2 px-4 w-full">
               Konzertprogramm
