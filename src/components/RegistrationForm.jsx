@@ -66,6 +66,7 @@ export const RegistrationForm = () => {
         >
           <Form>
             <div>
+              <p className="text-sm mb-2">Kostenlose Einladungskarten</p>
               <label className="block text-gray-900">Email:</label>
               <div className="mt-2">
                 <Field
