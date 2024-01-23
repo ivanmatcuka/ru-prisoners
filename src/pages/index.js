@@ -7,24 +7,29 @@ import Image from "next/image";
 
 const ARTISTS = [
   {
-    name: "Daniil Orlov",
+    name: "Daniil Orlov, Klavier",
     link: "https://www.thalia-theater.de/ueber-uns/ensemble/schauspiel/darsteller/daniil-orlov",
     imageSrc: "/artists/daniil_o.png",
   },
   {
-    name: "Alexander Estis",
+    name: "Alexander Estis, Schriftsteller",
     link: "https://estis.ch/",
     imageSrc: "/artists/alexander_e.png",
   },
   {
-    name: "Yaroslav Georgiev",
+    name: "Yaroslav Georgiev, Cello",
     link: "https://www.stuttgarter-philharmoniker.de/3545.html",
     imageSrc: "/artists/yaroslav_g.png",
   },
   {
-    name: "Evgeniya Kleyn",
+    name: "Evgeniya Kleyn, Klavier",
     link: "https://www.tonali.de/profile/evgenyia-kleyn/",
     imageSrc: "/artists/evgeniya_k.png",
+  },
+  {
+    name: "Maria Markina, Sängerin",
+    link: "https://mariamarkina.art/about/",
+    imageSrc: "/artists/maria_m.jpg",
   },
 ];
 
