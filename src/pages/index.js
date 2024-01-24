@@ -85,8 +85,8 @@ const DONATES = [
   },
   {
     name: "MEMORIAL",
-    link: "https://memohrc.org/en/content/support-political-prisoners",
-    imageSrc: "/memorial.jpeg",
+    link: "https://memopzk.org/",
+    imageSrc: "/memorial.svg",
     description: "Human Rights Centre",
   },
   {
@@ -158,7 +158,7 @@ export default function Home() {
         <div className="flex flex-col flex-1">
           <h2 className="text-2xl font-medium">Spenden für</h2>
           <div className="news-block__notch mb-4 mt-4" />
-          <div className="flex mt-8 lg:m-auto flex-wrap items-center justify-between gap-y-8">
+          <div className="flex lg:m-auto flex-wrap items-center justify-between gap-y-8">
             <p>
               Im Rahmen der Veranstaltung können Sie einen beliebigen Betrag an
               folgende Organisationen spenden:

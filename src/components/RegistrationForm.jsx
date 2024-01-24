@@ -18,13 +18,14 @@ export const RegistrationForm = () => {
       .finally(() => setIsDownloading(false));
   };
 
-  const handleSubmit = ({ email, name }, { resetForm }) => {
+  const handleSubmit = ({ email, name, tickets }, { resetForm }) => {
     setIsSaving(true);
 
     const formData = new FormData();
     formData.append("date", new Date(Date.now()));
     formData.append("email", email);
     formData.append("name", name);
+    formData.append("tickets", tickets);
 
     fetch(process.env.GOOGLE_APPS_SCRIPT, {
       method: "POST",
@@ -89,6 +90,22 @@ export const RegistrationForm = () => {
                   id="name"
                   name="name"
                   className="block w-full rounded-md border-0 p-1.5 shadow-sm ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="mt-4">
+              <div className="flex items-center justify-between">
+                <label className="block text-gray-900">Anzahl der Gäste:</label>
+              </div>
+              <div className="mt-2">
+                <Field
+                  id="tickets"
+                  name="tickets"
+                  className="block w-full rounded-md border-0 p-1.5 shadow-sm ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  type="number"
+                  defaultValue="1"
                   required
                 />
               </div>
