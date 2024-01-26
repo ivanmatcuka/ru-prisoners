@@ -87,7 +87,7 @@ const DONATES = [
     name: "MEMORIAL",
     link: "https://memopzk.org/",
     imageSrc: "/memorial.svg",
-    description: "Human Rights Centre",
+    description: "The ‘Political Prisoners. Memorial’ human rights project",
   },
   {
     name: "SOLIDARITY ZONE",
