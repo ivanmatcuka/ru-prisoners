@@ -7,7 +7,7 @@ export const Donate = ({ donate: { imageSrc, link, name, description } }) => {
         <Image width={150} height={150} src={imageSrc} alt={name} />
       </a>
       <p className="text-1xl font-medium my-2 block">{name}</p>
-      <p className="text-sm text-gray italic">{description}</p>
+      <p className="text-sm text-gray italic px-1">{description}</p>
     </div>
   );
 };

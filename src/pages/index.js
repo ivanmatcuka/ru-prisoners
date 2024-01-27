@@ -158,11 +158,11 @@ export default function Home() {
         <div className="flex flex-col flex-1">
           <h2 className="text-2xl font-medium">Spenden für</h2>
           <div className="news-block__notch mb-4 mt-4" />
+          <p className="mb-4">
+            Im Rahmen der Veranstaltung können Sie einen beliebigen Betrag an
+            folgende Organisationen spenden:
+          </p>
           <div className="flex lg:m-auto flex-wrap items-center justify-between gap-y-8">
-            <p>
-              Im Rahmen der Veranstaltung können Sie einen beliebigen Betrag an
-              folgende Organisationen spenden:
-            </p>
             {DONATES.map((donate, index) => (
               <div className="w-full lg:w-2/6" key={index}>
                 <Donate donate={donate} />

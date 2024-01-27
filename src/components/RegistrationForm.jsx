@@ -62,8 +62,10 @@ export const RegistrationForm = () => {
           initialValues={{
             email: "",
             name: "",
+            tickets: 1,
           }}
           onSubmit={handleSubmit}
+          enableReinitialize={true}
         >
           <Form>
             <div>
