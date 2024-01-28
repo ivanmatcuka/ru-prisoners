@@ -60,11 +60,6 @@ const PRISONERS = [
     imageSrc: "/prisoners/dzhumayev.png",
   },
   {
-    name: "Zhenya Berkovich and Svetlana Petriychuk",
-    link: "https://www.dw.com/en/russia-outrage-after-director-and-playwright-detained/a-65533685",
-    imageSrc: "/prisoners/berkovich_and_petriychuk.png",
-  },
-  {
     name: "Valeria Zotova",
     link: "https://therussianreader.com/2023/02/23/2360/",
     imageSrc: "/prisoners/zotova.png",
