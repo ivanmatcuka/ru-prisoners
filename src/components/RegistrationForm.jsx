@@ -12,9 +12,7 @@ export const RegistrationForm = () => {
     new JsFileDownloader({
       url: "/program.pdf",
     })
-      .catch((error) => {
-        // Called when an error occurred
-      })
+      .catch((_) => {})
       .finally(() => setIsDownloading(false));
   };
 
@@ -116,9 +114,9 @@ export const RegistrationForm = () => {
               <button
                 className="block bg-accent text-white rounded py-2 px-4 mb-2 w-full disabled:opacity-50"
                 type="submit"
-                disabled={isDownloading || isSaving}
+                disabled
               >
-                Tickets sichern
+                Sold out
               </button>
               <button
                 className="block bg-grey border border-black rounded py-2 px-4 w-full"

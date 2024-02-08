@@ -31,6 +31,11 @@ const ARTISTS = [
     link: "https://mariamarkina.art/about/",
     imageSrc: "/artists/maria_m.jpg",
   },
+  {
+    name: "Lilya Matveeva, Künstlerin",
+    link: "https://lilyamatveeva.com",
+    imageSrc: "/artists/lilya_m.jpg",
+  },
 ];
 
 const PRISONERS = [
