@@ -36,6 +36,21 @@ const ARTISTS = [
     link: "https://lilyamatveeva.com",
     imageSrc: "/artists/lilya_m.jpg",
   },
+  {
+    name: "Nikolai Estis, Künstler",
+    link: "https://de.m.wikipedia.org/wiki/Nikolai_Estis",
+    imageSrc: "/artists/nikolas_e.jpg",
+  },
+  {
+    name: "Daria Grinstein, Klavier",
+    link: "https://www.instagram.com/daria_grinstein?igsh=MTEyN3J5bHRsOWdvMA==",
+    imageSrc: "/artists/daria_g.jpg",
+  },
+  {
+    name: "Mania Rasstegaeva, Soprano",
+    link: "https://www.instagram.com/sexcursovod?igsh=MW40Ymg0OWM4M3NmOQ==",
+    imageSrc: "/artists/mania_r.jpg",
+  },
 ];
 
 const PRISONERS = [
@@ -118,6 +133,7 @@ export default function Home() {
               Max-Brauer-Allee 24, 22765 Hamburg
             </a>
           </p>
+          <p>Alfred Schittke Akademie International</p>
         </div>
       </header>
       <div className="flex flex-col gap-y-8 lg:gap-x-8 lg:flex-row mt-8 lg:mt-16">
