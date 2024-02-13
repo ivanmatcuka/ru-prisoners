@@ -16,37 +16,6 @@ export const RegistrationForm = () => {
       .finally(() => setIsDownloading(false));
   };
 
-  const handleSubmit = ({ email, name, tickets }, { resetForm }) => {
-    setIsSaving(true);
-
-    const formData = new FormData();
-    formData.append("date", new Date(Date.now()));
-    formData.append("email", email);
-    formData.append("name", name);
-    formData.append("tickets", tickets);
-
-    fetch(process.env.GOOGLE_APPS_SCRIPT, {
-      method: "POST",
-      body: formData,
-    })
-      .then(() => {
-        Toastify({
-          text: "Vielen Dank! Der Brief mit den Tickets wurde an Ihre E-Mail-Adresse gesendet.",
-          duration: 3000,
-          close: true,
-          gravity: "top",
-          position: "left",
-          stopOnFocus: true,
-          backgroundColor: "#00b37f",
-        }).showToast();
-        resetForm();
-      })
-      .finally(() => {
-        resetForm();
-        setIsSaving(false);
-      });
-  };
-
   return (
     <div className="flex min-h-full flex-col justify-start w-full px-0 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
@@ -62,7 +31,6 @@ export const RegistrationForm = () => {
             name: "",
             tickets: 1,
           }}
-          onSubmit={handleSubmit}
           enableReinitialize={true}
         >
           <Form>
