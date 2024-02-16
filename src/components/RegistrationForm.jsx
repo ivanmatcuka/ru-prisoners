@@ -10,7 +10,7 @@ export const RegistrationForm = () => {
     setIsDownloading(true);
 
     new JsFileDownloader({
-      url: "/program.pdf",
+      url: "/programm.docx",
     })
       .catch((_) => {})
       .finally(() => setIsDownloading(false));
